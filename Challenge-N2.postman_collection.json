@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "39ba2d19-4032-4751-8dfb-cc6092656661",
+		"name": "Challenge-N2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Hotels (ITEMS 1 y 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hotels?dateFrom=14/02/2021&dateTo=11/03/2021&destination=Puerto Iguazú",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "14/02/2021"
+						},
+						{
+							"key": "dateTo",
+							"value": "11/03/2021"
+						},
+						{
+							"key": "destination",
+							"value": "Puerto Iguazú"
+						}
+					]
+				},
+				"description": "Get all hotels (rooms) free given the a range of date and destination."
+			},
+			"response": []
+		},
+		{
+			"name": "New Reserv (ITEM 3)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"seba_gonzalez@unmail.com\",\n    \"booking\": {\n        \"dateFrom\": \"13/02/2021\",\n        \"dateTo\": \"15/02/2021\",\n        \"destination\": \"Buenos Aires\",\n        \"hotelCode\": \"BH-0002\",\n        \"peopleAmount\": 2,\n        \"roomType\": \"Doble\",\n        \"people\": [\n            {\n                \"dni\": \"12345678\",\n                \"name\": \"Pepito\",\n                \"lastName\": \"Gomez\",\n                \"birthDate\": \"10/11/1982\",\n                \"mail\": \"pepitogomez@gmail.com\"\n            },\n            {\n                \"dni\": \"13345678\",\n                \"name\": \"Fulanito\",\n                \"lastName\": \"Gomez\",\n                \"birthDate\": \"10/11/1983\",\n                \"mail\": \"fulanitogomez@gmail.com\"\n            }\n        ],\n        \"paymentMethod\": {\n            \"type\": \"CREDIT\",\n            \"number\": \"1234-1234-1234-1234\",\n            \"dues\": 6\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"booking"
+					]
+				},
+				"description": "Creates a new hotel room reserv given the booking and payment method information."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flights (ITEM 4 y 5)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/flights?dateFrom=16/02/2021&dateTo=23/02/2021&origin=Bogotá&destination=Buenos Aires",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"flights"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "16/02/2021"
+						},
+						{
+							"key": "dateTo",
+							"value": "23/02/2021"
+						},
+						{
+							"key": "origin",
+							"value": "Bogotá"
+						},
+						{
+							"key": "destination",
+							"value": "Buenos Aires"
+						}
+					]
+				},
+				"description": "Get all avaible flights in the given range of dates, origin and destination"
+			},
+			"response": []
+		}
+	]
+}

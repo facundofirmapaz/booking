@@ -1,0 +1,9 @@
+{
+  "flightNumber": "BOBA-6567",
+  "origin": "Bogotá",
+  "destination": "Buenos Aires",
+  "seatType": "Business",
+  "price": 57000.0,
+  "dateFrom": "15/02/2021",
+  "dateTo": "28/02/2021"
+}
